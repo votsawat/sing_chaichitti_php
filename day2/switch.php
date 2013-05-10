@@ -14,7 +14,6 @@
 				<li><a href="switch.php">Home</a></li>
 				<li><a href="switch.php?page=about">About</a></li>
 				<li><a href="switch.php?page=contact">Contact</a></li>
-
 			</ul>
 
 		</nav>

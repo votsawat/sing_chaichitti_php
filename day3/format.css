@@ -1,0 +1,42 @@
+body {
+	background-color: #F0F8FF;
+	font-family: sans-serif;
+}
+
+h1 {
+	color: #008B8B;
+	font-size: 32px;
+	margin-left: 30px;
+}
+
+#form{
+	border: double;
+	width: 400px;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+
+form {
+	padding-left: 30px;
+	padding-bottom: 20px;
+
+}
+
+input[type="text"],
+input[type="password"]{
+	margin-top: 10px;
+	display: block;
+}
+
+input[type="submit"]{
+	background-color: #008080;
+	width: 80px;
+	height:35px;
+	font-family: sans-serif;
+	color: #FFFFFF;
+	border: none;
+}
+
+.error {
+	background-color: #FFF;
+}
