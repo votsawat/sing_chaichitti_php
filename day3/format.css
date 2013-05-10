@@ -5,15 +5,16 @@ body {
 
 h1 {
 	color: #008B8B;
-	font-size: 32px;
+	font-size: 28px;
 	margin-left: 30px;
 }
 
 #form{
 	border: double;
-	width: 400px;
+	width: 380px;
 	margin: 0 auto;
 	background-color: #FFF;
+	margin-top: 50px;
 }
 
 form {
@@ -24,7 +25,7 @@ form {
 
 input[type="text"],
 input[type="password"]{
-	margin-top: 10px;
+	margin-top: 5px;
 	display: block;
 }
 
@@ -38,5 +39,10 @@ input[type="submit"]{
 }
 
 .error {
-	background-color: #FFF;
+	font-size: 14px;
+	width: 80%;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	padding: 10px 10px;
+	background-color: #FFF5EE;
 }

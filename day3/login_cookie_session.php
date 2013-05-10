@@ -68,7 +68,7 @@ elseif( $_COOKIE['login'] == 1) {
 	//if an error was triggered, show a message
 	
 	if( $error ){
-		echo 'Username and password do not match. Try again.';
+		echo '<div class="error">Username and password do not match. Try again.</div>';
 	} 
 	?>
 
