@@ -34,7 +34,7 @@ if( $_POST['did_submit'] ):
 
 	//handle success/failure user feedback
 	if( $did_send ):
-		$display_msg = 'Thank you for your message, '.$name.', I will get back to you soon.';
+		$display_msg = '<div class="thanks">Thank you for your message, '.$name.', I will get back to you soon.</div>';
 	else:
 		$display_msg = 'Sorry, there was a problem sending your message. ';
 
@@ -52,6 +52,7 @@ endif; //did_submit
 <title>Example Contact Form - Simple </title>
 
 <link rel="stylesheet" type="text/css" href="format.css">
+
 
 </head>
 
@@ -83,7 +84,7 @@ if( !$did_send ): ?>
 <label for="email">Your Email Address:</label>
 <input type="text" name="email" id="email" />
 
-<label for="phone">Your Phone Number</label>
+<label for="phone">Your Phone Number:</label>
 <input type="text" name="phone" id="phone" />
 
 <label for="message">Your Message:</label>

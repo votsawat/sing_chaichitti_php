@@ -6,13 +6,15 @@ body {
 h1{
 	padding: 0 20px;
 	font-size: 28px;
+	color: #2E8B57;
+	border-bottom: 2px dotted;
 }
 
 #form{
 	border: double;
 	width: 380px;
 	margin: 0 auto;
-	background-color: #FFFFF0;
+	background-color: #F0FFF0;
 	margin-top: 40px;
 }
 
@@ -21,10 +23,31 @@ form {
 	padding-bottom: 20px;
 }
 
+label {
+	color: #708090;
+}
 
 input[type=text],
 input[type=submit],
 textarea {
-	display: block;
+	display: block;	
+}
+
+input,
+textarea {
+	margin-bottom: 15px;
+}
+
+input[type=submit]{
+	background-color: #BC8F8F;
+	width: 130px;
+	height: 30px;
+}
+
+.thanks {
+	margin: 0 auto;
+	padding-left: 20px;
+	height: 120px;
+	color: #708090;
 }
 
