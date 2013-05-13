@@ -1,0 +1,30 @@
+body {
+	background-color: #90EE90 ;
+	font-family: sans-serif;
+}
+
+h1{
+	padding: 0 20px;
+	font-size: 28px;
+}
+
+#form{
+	border: double;
+	width: 380px;
+	margin: 0 auto;
+	background-color: #FFFFF0;
+	margin-top: 40px;
+}
+
+form {
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+
+input[type=text],
+input[type=submit],
+textarea {
+	display: block;
+}
+
