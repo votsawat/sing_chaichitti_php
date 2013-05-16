@@ -1,0 +1,37 @@
+body { 
+	background-color: #F5F5DC;
+}
+
+#container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+#content {
+	background-color: #F8F8F8;
+	padding: 10px 20px;
+}
+
+main {
+	width: 500px;
+	float: left;
+}
+
+h1 {
+	background-color: #000000;
+	color: #F5F5DC;
+	padding: 10px 10px;
+}
+
+
+article.post {
+}
+
+aside {
+	width: 200px;
+	float: right;
+}
+
+footer {
+	clear: both;
+}
