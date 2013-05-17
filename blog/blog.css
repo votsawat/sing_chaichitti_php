@@ -7,6 +7,10 @@ body {
 	width: 960px;
 }
 
+nav ul li a {
+	display: inline;
+}
+
 #content {
 	background-color: #F8F8F8;
 	padding: 10px 20px;
@@ -23,8 +27,8 @@ h1 {
 	padding: 10px 10px;
 }
 
-
 article.post {
+	
 }
 
 aside {
