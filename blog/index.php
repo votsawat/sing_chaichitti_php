@@ -1,4 +1,6 @@
-<?php require('db_connect.php'); ?>
+<?php require( 'db_connect.php' ); 
+include_once( 'functions.php' ); ?>
+
 
 
 <!DOCTYPE html>
@@ -35,6 +37,9 @@
 		break;
 		case 'links':
 			include( 'content-links.php' );	
+		break;
+		case 'single':
+			include( 'content-single.php' );
 		break;
 		default:
 			include( 'content-home.php' );
