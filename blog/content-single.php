@@ -3,6 +3,8 @@
 //what post are we trying to show?
 $post_id = $_GET['post_id'];
 
+include( 'comment-parse.php' );
+
 //set up a query to get the post that we are trying to view if it is public
 		$query = "SELECT posts.*, categories.*, users.username, users.user_id
 					FROM posts, categories, users
@@ -67,8 +69,15 @@ if( $result_comm = $db->query($query_comm) ):
 </section>
 <?php endif; //comment results found?>
 
+<?php 
+//only show the form if comments are allowed
+if( 1 == $row['allow_comments'] ):
+	include( 'comment-form.php' );
+endif;
+?>
+
 		<?php 
-		endwhile;
+		endwhile; //post was found
 		?>
 		
 

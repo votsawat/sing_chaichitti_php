@@ -2,7 +2,6 @@
 include_once( 'functions.php' ); ?>
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +14,9 @@ include_once( 'functions.php' ); ?>
 
 <body>
 	<div id="container">
+
 	<header>
-		<h1>Votsawat's blog</h1>
+		<h1><a href="index.php" class="home">Votsawat's blog</a></h1>
 		<nav>
 			<ul>
 				<li><a href="index.php">HOME</a></li>

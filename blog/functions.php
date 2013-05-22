@@ -24,3 +24,13 @@ function comments_number($number){
 		echo "$number Comments";
 	}
 }
+
+/**
+ *  Sanitizer for DB inputs
+ *@param $input mixed - pass any 'dirty' form field
+ *@param $link mysqli database connection
+ */
+
+function clean_input( $input, $link ){
+	return mysqli_real_escape_string( $link, strip_tags(trim($input)) ); 
+}

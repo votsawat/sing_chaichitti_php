@@ -1,5 +1,6 @@
 body { 
 	background-color: #F5F5DC;
+	overflow: scroll;
 }
 
 #container {
@@ -7,9 +8,51 @@ body {
 	width: 960px;
 }
 
-nav ul li a {
-	display: inline;
+header {
+	background-color: #8FBC8F;
+	color: #F5F5DC;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
+
+h1{
+	padding-left: 35px;
+}
+
+a.home,a.home:hover {
+	color: #F5F5DC;
+}
+
+a {
+	text-decoration: none;
+	color: #8FBC8F;
+}
+
+a:hover {
+	color: #708090;
+}
+
+/*navigation*/
+
+nav ul li{
+	display: inline;
+	list-style-type: none;
+	padding-right: 10px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #F5F5DC;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+	color: #FFE4C4;
+}
+
+
+/*content, main*/
 
 #content {
 	background-color: #F8F8F8;
@@ -21,20 +64,40 @@ main {
 	float: left;
 }
 
-h1 {
-	background-color: #000000;
-	color: #F5F5DC;
-	padding: 10px 10px;
-}
-
-article.post {
-	
-}
+/*sidebar*/
 
 aside {
 	width: 200px;
 	float: right;
+	padding-left: 20px;
+	border-left: 1px dotted;
 }
+
+
+/*forms*/
+
+form{
+	border: double;
+	width: 380px;
+	background-color: #F0FFF0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px 20px;
+}
+
+label,
+input[type=submit] {
+	display: block;
+}
+
+input,
+textarea {
+	margin-bottom: 15px;
+}
+
+
+
+
 
 footer {
 	clear: both;
