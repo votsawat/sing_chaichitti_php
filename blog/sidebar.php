@@ -1,4 +1,7 @@
 <aside>
+
+<h2><a href="rss.php">Subscribe to Feed</a></h2>
+
 	<?php 
 	//set up query to get the titles & post_id of the latest 10 posts
 	$query_latest = "SELECT title, post_id
