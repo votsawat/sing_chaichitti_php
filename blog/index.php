@@ -24,6 +24,8 @@ include_once( 'functions.php' ); ?>
 				<li><a href="index.php?page=links">LINKS</a></li>
 			</ul>
 		</nav>
+		<?php include('searchform.php'); ?>
+
 	</header>
 
 	<div id="content">
@@ -40,6 +42,9 @@ include_once( 'functions.php' ); ?>
 		break;
 		case 'single':
 			include( 'content-single.php' );
+		break;
+		case 'search':
+			include( 'content-search.php');
 		break;
 		default:
 			include( 'content-home.php' );

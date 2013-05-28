@@ -74,9 +74,9 @@ aside {
 }
 
 
-/*forms*/
+/* comment forms*/
 
-form{
+form.form{
 	border: double;
 	width: 380px;
 	background-color: #F0FFF0;
@@ -95,8 +95,35 @@ textarea {
 	margin-bottom: 15px;
 }
 
+/*search form*/
+
+form.search{
+	float: right;
+	margin-top: -60px;
+	margin-right: 40px;
+}
+
+form.search input[type=text]{
+	width: 200px;
+}
 
 
+/*button previous page/ next page*/
+.button{
+	background-color: #548CCB;
+	padding: .25em;
+	display: inline-block;
+	color: #FFF;
+}
+
+a.button:hover {
+	color: #80FF80;
+}
+
+.disabled.button{
+	background-color: #808080;
+	color: #FFF;
+}
 
 
 footer {

@@ -9,7 +9,7 @@
 	?>
 
 
-	<form method="post" action="#commentform">
+	<form method="post" action="#commentform" class="form">
 		
 		<label for="name">Your Name:</label>
 		<input type="text" name="name" id="name" required="required" placeholder="required" />
