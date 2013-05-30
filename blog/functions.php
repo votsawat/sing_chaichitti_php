@@ -34,3 +34,4 @@ function comments_number($number){
 function clean_input( $input, $link ){
 	return mysqli_real_escape_string( $link, strip_tags(trim($input)) ); 
 }
+
