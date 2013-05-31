@@ -20,10 +20,11 @@ h1{
 	padding-left: 35px;
 }
 
-a.home,a.home:hover {
+a.logo, a.logo:hover {
 	color: #F5F5DC;
 }
 
+/*style every a tag*/
 a {
 	text-decoration: none;
 	color: #8FBC8F;
@@ -51,6 +52,19 @@ nav ul li a:active {
 	color: #FFE4C4;
 }
 
+/*make nav stand out on the page*/
+
+.home .home a{
+	color: #FFE4C4;
+}
+
+.blog .blog a{
+	color: #FFE4C4;
+}
+
+.links .links a{
+	color: #FFE4C4;
+}
 
 /*content, main*/
 

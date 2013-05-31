@@ -1,6 +1,5 @@
-<?php  
+<?php 
 //open a new session or resume the existing session
-
 session_start();
 require('db_connect.php');
 include_once('functions.php');
@@ -13,7 +12,7 @@ if($_SESSION['logged_in']){
 
 //if the form was submitted, try to log them in
 if( $_POST['did_login'] ){
-	//extract the values the use typed in and sanitize
+	//extract the values the user typed in and sanitize
 	$orig_username = $_POST['username'];
 	$orig_password = $_POST['password'];
 	$clean_username = clean_input($_POST['username'], $db);
@@ -22,8 +21,7 @@ if( $_POST['did_login'] ){
 	//apply a hash to the password
 	$sha_password = sha1($clean_password);
 
-
-	//check user values with correct values. if they match, log them in
+	//check to see if minimum lengths are met (validate)
 	if( strlen( $clean_username ) >= 5 AND strlen( $clean_password ) >= 5 ){
 
 		//look for a user that matches in the DB
@@ -33,21 +31,23 @@ if( $_POST['did_login'] ){
 					AND password = '$sha_password'
 					AND is_admin = 1
 					LIMIT 1";
-
 		$result = $db->query($query);
 
-
-	//if one record is found, log them in
-	if( 1 == $result->num_rows ){
-		//use cookies and sessions to remember the user
-		$_SESSION['logged_in'] = 1;
-		setcookie( 'login', 1, time() + 60 * 60 * 24 * 14 );
-		//direct the new logged-in user to the admin panel
-		header( 'Location:admin.php' );
-	}else{
-		$error = 1;
+		//if one record is found, log them in
+		if( 1 == $result->num_rows ){
+			$row = $result->fetch_assoc();
+			//use cookies and sessions to remember the user
+			$_SESSION['logged_in'] = 1;
+			setcookie( 'logged_in', 1, time() + 60 * 60 * 24 * 14 );
+			//WHO is logged in?
+			$_SESSION['user_id'] = $row['user_id'];
+			setcookie( 'user_id', $row['user_id'], time() + 60 * 60 * 24 * 14 );
+			//direct the now logged-in user to the admin panel
+			header( 'Location:admin.php' );
+		}else{
+			$error = 1;
 		}
-	}else{
+	}else{ 
 		//Username or pass too short
 		$error = 1;
 	}
@@ -56,13 +56,15 @@ if( $_POST['did_login'] ){
 //if the user is trying to log out, unset and destroy the session and cookies
 if( $_GET['action'] == 'logout' ){
 	unset( $_SESSION['logged_in'] );
+	unset( $_SESSION['user_id'] );
 	session_destroy();
-	setcookie('login', '', time() - 60 * 60 * 24 * 365 ); // make it to be expired since last year
+	setcookie('logged_in', '', time() - 60 * 60 * 24 * 365 ); 
+	setcookie('user_id', '', time() - 60 * 60 * 24 * 365 ); 
 }
-
 //if the user visits the page, and the cookie is still valid, re-create the session variable
-elseif( $_COOKIE['login'] == 1) {
+elseif( $_COOKIE['logged_in'] == 1 ){
 	$_SESSION['logged_in'] = 1;
+	$_SESSION['user_id'] = $_COOKIE['user_id'];
 }
 
 ?>

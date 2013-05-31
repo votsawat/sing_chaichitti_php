@@ -12,16 +12,16 @@ include_once( 'functions.php' ); ?>
 
 </head>
 
-<body>
+<body <?php echo mc_body_class(); ?>>
 	<div id="container">
 
 	<header>
-		<h1><a href="index.php" class="home">Votsawat's blog</a></h1>
+		<h1><a href="index.php" class="logo">Votsawat's blog</a></h1>
 		<nav>
 			<ul>
-				<li><a href="index.php">HOME</a></li>
-				<li><a href="index.php?page=blog">BLOG</a></li>
-				<li><a href="index.php?page=links">LINKS</a></li>
+				<li class="home"><a href="index.php">HOME</a></li>
+				<li class="blog"><a href="index.php?page=blog">BLOG</a></li>
+				<li class="links"><a href="index.php?page=links">LINKS</a></li>
 			</ul>
 		</nav>
 		<?php include('searchform.php'); ?>
