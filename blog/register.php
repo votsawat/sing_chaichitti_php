@@ -110,6 +110,9 @@ endif; // did register
 </head>
 
 <body>
+
+<div id="form">
+
 	<h1>Sign Up!</h1>
 	
 	<?php
@@ -143,7 +146,7 @@ endif; // did register
 
 
 	</form>
+</div>
 
 </body>
-
 </html>
