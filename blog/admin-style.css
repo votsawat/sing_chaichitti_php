@@ -360,45 +360,4 @@ input[type=submit] {
 	background-color: #D5FED3;
 	color: #060;
 	border: solid 1px #99CC66;
-}
-/* 
-    == image checkbox replacement
-    (still accessible!)
-    http://www.thecssninja.com/css/custom-inputs-using-css
-	
-    :not(#foo) > is a rule filter to block browsers
-                 that don't support that selector from
-                 applying rules they shouldn't
-       
-*/
-form:not(#foo) > div > input[type='radio'],
-form:not(#foo) > div > input[type='checkbox'],
-form:not(#foo) > div > p > input[type='checkbox'] {
-	/* Hide the input, but have it still be clickable */
-	opacity: 0;
-	float: left;
-	width: 18px;
-}
-form:not(#foo) > div > input[type='radio'] + label,
-form:not(#foo) > div > input[type='checkbox'] + label,
-form:not(#foo) > div > p > input[type='checkbox'] + label {
-	margin: 0;
-	clear: none;
-	/* Left padding makes room for image */
-	padding: 5px 0 4px 24px;
-	/* Make look clickable because they are */
-	cursor: pointer;
-	background: url(images/off.png) left center no-repeat;
-	position: relative;
-	left: -18px;
-}
-/*
-    Change from unchecked to checked graphic
-*/
-form:not(#foo) > div > input[type='radio']:checked + label {
-	background-image: url(images/radio.png);
-}
-form:not(#foo) > div > input[type='checkbox']:checked + label,
-form:not(#foo) > div > p > input[type='checkbox']:checked + label {
-	background-image: url(images/check.png);
-}
+} 

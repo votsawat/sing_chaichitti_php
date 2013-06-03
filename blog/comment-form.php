@@ -8,7 +8,6 @@
 	endif;
 	?>
 
-
 	<form method="post" action="#commentform" class="form">
 		
 		<label for="name">Your Name:</label>
@@ -26,7 +25,6 @@
 		<input type="submit" value="Post Comment" />
 		<input type="hidden" name="did_comment" value="1" />
 
-
 	</form>
-
+	
 </section>
