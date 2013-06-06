@@ -64,6 +64,9 @@ $userpic = $row_user['avatar_link'];
 			case 'manage':
 				include('admin-manage.php');
 			break;
+			case 'edit':
+				include('admin-edit.php');
+			break;
 			case 'comments':
 				include('admin-comments.php');
 			break;
